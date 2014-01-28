@@ -8,12 +8,11 @@ from .models import (
     MyModel,
     )
 
-# TODO: Learn how to add new route_name
-@view_config(route_name='home', renderer='templates/mytemplate.pt')
-def something(request):
+@view_config(route_name='burgundy', renderer='templates/mytemplate.pt')
+def burgundy(request):
     return {'one': 'soemtihng', 'project': 'Thing'}
 
-# @view_config(route_name='home', renderer='templates/mytemplate.pt')
+@view_config(route_name='home', renderer='templates/mytemplate.pt')
 def my_view(request):
     try:
         one = DBSession.query(MyModel).filter(MyModel.name == 'one').first()

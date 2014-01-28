@@ -17,5 +17,6 @@ def main(global_config, **settings):
     config.add_static_view('static', 'static', cache_max_age=3600)
 #   First is the location in the views.py decorator, second is the URL that is hit
     config.add_route('home', '/')
+    config.add_route('burgundy', '/burgundy')
     config.scan()
     return config.make_wsgi_app()
