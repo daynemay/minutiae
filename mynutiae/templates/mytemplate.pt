@@ -17,7 +17,7 @@
   <div id="wrap">
     <div id="top">
       <div class="top align-center">
-        <div><img src="${request.static_url('mynutiae:static/pyramid.png')}" width="750" height="169" alt="pyramid"/></div>
+        <div>mynutiae<!--img src="${request.static_url('mynutiae:static/pyramid.png')}" width="750" height="169" alt="pyramid"/--></div>
       </div>
     </div>
     <div id="middle">
@@ -45,24 +45,6 @@
             </li>
             <li>
               <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/#narrative-documentation">Narrative Documentation</a>
-            </li>
-            <li>
-              <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/#reference-material">API Documentation</a>
-            </li>
-            <li>
-              <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/#tutorials">Tutorials</a>
-            </li>
-            <li>
-              <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/#detailed-change-history">Change History</a>
-            </li>
-            <li>
-              <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/#sample-applications">Sample Applications</a>
-            </li>
-            <li>
-              <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/#support-and-development">Support and Development</a>
-            </li>
-            <li>
-              <a href="irc://irc.freenode.net#pyramid">IRC Channel</a>
             </li>
             </ul>
         </div>
