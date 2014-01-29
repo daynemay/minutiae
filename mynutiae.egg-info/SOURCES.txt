@@ -8,7 +8,6 @@ setup.py
 mynutiae/__init__.py
 mynutiae/models.py
 mynutiae/tests.py
-mynutiae/views.py
 mynutiae.egg-info/PKG-INFO
 mynutiae.egg-info/SOURCES.txt
 mynutiae.egg-info/dependency_links.txt
@@ -27,4 +26,8 @@ mynutiae/static/pylons.css
 mynutiae/static/pyramid-small.png
 mynutiae/static/pyramid.png
 mynutiae/static/transparent.gif
+mynutiae/templates/login.pt
 mynutiae/templates/mytemplate.pt
+mynutiae/views/__init__.py
+mynutiae/views/user.py
+mynutiae/views/views.py
