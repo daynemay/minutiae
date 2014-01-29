@@ -8,12 +8,12 @@ from models import (
     MyModel,
     )
 
-@view_config(route_name='login', renderer='mynutiae:templates/login.pt')
+@view_config(route_name='login', renderer='mynutiae:templates/login.mako')
 def login(request):
     """Login"""
-    return {'project': 'mynutiae'}
+    return {'project': 'mynutiae', 'logged_in': True}
 
-@view_config(route_name='logout', renderer='mynutiae:templates/login.pt')
+@view_config(route_name='logout', renderer='mynutiae:templates/login.mako')
 def logout(request):
     """Logout"""
     return {'project': 'mynutiae... but you logged out'}

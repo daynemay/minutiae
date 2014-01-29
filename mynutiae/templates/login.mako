@@ -7,6 +7,7 @@
   <meta name="description" content="pyramid web application" />
   <link rel="shortcut icon" href="${request.static_url('mynutiae:static/favicon.ico')}" />
   <link rel="stylesheet" href="${request.static_url('mynutiae:static/pylons.css')}" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="${request.static_url('mynutiae:static/mynutiae.css')}" type="text/css" media="screen" charset="utf-8" />
   <link rel="stylesheet" href="http://static.pylonsproject.org/fonts/nobile/stylesheet.css" media="screen" />
   <link rel="stylesheet" href="http://static.pylonsproject.org/fonts/neuton/stylesheet.css" media="screen" />
   <!--[if lte IE 6]>
@@ -18,6 +19,9 @@
     <div id="top">
       <div class="top align-center">
         <div>The Login page</div>
+        %if logged_in:
+            Currently logged in
+        %endif
       </div>
     </div>
     <div id="middle">
