@@ -8,7 +8,7 @@ from mynutiae.models import (
     MyModel,
     )
 
-@view_config(route_name='home', renderer='mynutiae:templates/mytemplate.pt')
+@view_config(route_name='home', renderer='mynutiae:templates/mytemplate.mako')
 def my_view(request):
     try:
         one = DBSession.query(MyModel).filter(MyModel.name == 'one').first()
