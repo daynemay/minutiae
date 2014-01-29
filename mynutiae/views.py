@@ -8,9 +8,10 @@ from .models import (
     MyModel,
     )
 
-@view_config(route_name='burgundy', renderer='templates/mytemplate.pt')
-def burgundy(request):
-    return {'one': 'soemtihng', 'project': 'Thing'}
+@view_config(route_name='login', renderer='templates/login.pt')
+def login(request):
+    """Login"""
+    return {'project': 'mynutiae'}
 
 @view_config(route_name='home', renderer='templates/mytemplate.pt')
 def my_view(request):
