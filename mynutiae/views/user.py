@@ -5,7 +5,7 @@ from sqlalchemy.exc import DBAPIError
 
 from models import (
     DBSession,
-    MyModel,
+    User,
     )
 
 @view_config(route_name='login', renderer='mynutiae:templates/login.mako')

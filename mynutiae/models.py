@@ -23,19 +23,6 @@ from zope.sqlalchemy import ZopeTransactionExtension
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
-# TODO: Delete the MyModel model
-class MyModel(Base):
-    __tablename__ = 'models'
-    id = Column(Integer, primary_key=True)
-    name = Column(Text)
-    value = Column(Integer)
-
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
-
-Index('my_index', MyModel.name, unique=True, mysql_length=255)
-
 def hash_password(password):
     """ TODO: actually hash password"""
     return password
@@ -82,6 +69,9 @@ class User(Base):
 #         return crypt.check(user.password, password)
 # TODO: actually check password
         return True        
+
+# TODO: Other indexes
+Index('my_index', User.email, unique=True, mysql_length=255)
 
 # TODO: Use as basis for n:m relationship tables
 # ideas_tags = Table('ideas_tags', Base.metadata,
