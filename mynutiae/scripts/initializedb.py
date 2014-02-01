@@ -1,6 +1,8 @@
+"""Pyramid initializedb script"""
+
 import os
 import sys
-import transaction
+# import transaction
 
 from sqlalchemy import engine_from_config
 
@@ -9,14 +11,15 @@ from pyramid.paster import (
     setup_logging,
     )
 
-from ..models import (
+from mynutiae.models.models import (
     DBSession,
-    User,
+#    User,
     Base,
     )
 
 
 def usage(argv):
+    """Print usage and quit"""
     cmd = os.path.basename(argv[0])
     print('usage: %s <config_uri>\n'
           '(example: "%s development.ini")' % (cmd, cmd))
@@ -24,6 +27,7 @@ def usage(argv):
 
 
 def main(argv=sys.argv):
+    """Main logic of DB initialization"""
     if len(argv) != 2:
         usage(argv)
     config_uri = argv[1]

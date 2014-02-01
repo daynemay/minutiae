@@ -1,7 +1,7 @@
 """
 TODO: Models docstring
 """
-
+# TODO: Define individual source files per model
 from sqlalchemy import (
     Column,
     Index,

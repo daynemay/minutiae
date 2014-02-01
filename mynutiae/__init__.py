@@ -5,7 +5,7 @@ Define the MyNutiae application
 from pyramid.config import Configurator
 from sqlalchemy import engine_from_config
 
-from .models import (
+from .models.models import (
     DBSession,
     Base,
     )

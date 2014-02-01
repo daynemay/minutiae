@@ -6,7 +6,6 @@ production.ini
 setup.cfg
 setup.py
 mynutiae/__init__.py
-mynutiae/models.py
 mynutiae/tests.py
 mynutiae.egg-info/PKG-INFO
 mynutiae.egg-info/SOURCES.txt
@@ -15,6 +14,8 @@ mynutiae.egg-info/entry_points.txt
 mynutiae.egg-info/not-zip-safe
 mynutiae.egg-info/requires.txt
 mynutiae.egg-info/top_level.txt
+mynutiae/models/__init__.py
+mynutiae/models/models.py
 mynutiae/scripts/__init__.py
 mynutiae/scripts/initializedb.py
 mynutiae/static/favicon.ico
@@ -22,12 +23,13 @@ mynutiae/static/footerbg.png
 mynutiae/static/headerbg.png
 mynutiae/static/ie6.css
 mynutiae/static/middlebg.png
+mynutiae/static/mynutiae.css
 mynutiae/static/pylons.css
 mynutiae/static/pyramid-small.png
 mynutiae/static/pyramid.png
 mynutiae/static/transparent.gif
-mynutiae/templates/login.pt
-mynutiae/templates/mytemplate.pt
+mynutiae/templates/login.mako
+mynutiae/templates/mytemplate.mako
 mynutiae/views/__init__.py
 mynutiae/views/user.py
 mynutiae/views/views.py
