@@ -3,7 +3,7 @@ from pyramid.view import view_config
 
 from sqlalchemy.exc import DBAPIError
 
-from mynutiae.models.models import (
+from mynutiae.models._user import (
     DBSession,
     User,
     )
@@ -11,7 +11,8 @@ from mynutiae.models.models import (
 @view_config(route_name='home', renderer='mynutiae:templates/mytemplate.mako')
 def my_view(request):
     try:
-        one = DBSession.query(User).filter(User.name == 'one').first()
+        # TODO: This? one = DBSession.query(User).filter(User.name == 'one').first()
+        one = { 'something': 'whatever' }
     except DBAPIError:
         return Response(conn_err_msg, content_type='text/plain', status_int=500)
     return {'one': one, 'project': 'mynutiae'}

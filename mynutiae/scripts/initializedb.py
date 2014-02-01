@@ -11,7 +11,7 @@ from pyramid.paster import (
     setup_logging,
     )
 
-from mynutiae.models.models import (
+from mynutiae.models._user import (
     DBSession,
 #    User,
     Base,

@@ -3,7 +3,7 @@ from pyramid.view import view_config
 
 from sqlalchemy.exc import DBAPIError
 
-from mynutiae.models.models import (
+from mynutiae.models._user import (
     DBSession,
     User,
     )
