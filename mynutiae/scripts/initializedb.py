@@ -17,6 +17,7 @@ from mynutiae.models._user import (
     Base,
     )
 
+from mynutiae.models._question import Question
 
 def usage(argv):
     """Print usage and quit"""
@@ -37,6 +38,10 @@ def main(argv=sys.argv):
     DBSession.configure(bind=engine)
     Base.metadata.create_all(engine)
     # TODO: Add initial users?
+#    with transaction.manager:
+#        model = MyModel(name='one', value=1)
+#        DBSession.add(model)
+    # TODO: Add initial questions?
 #    with transaction.manager:
 #        model = MyModel(name='one', value=1)
 #        DBSession.add(model)
