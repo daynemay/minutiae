@@ -1,7 +1,5 @@
-"""
-TODO: Models docstring
-"""
-# TODO: Define individual source files per model
+""" Application user model """
+
 from sqlalchemy import (
     Column,
     Index,
@@ -28,9 +26,7 @@ def hash_password(password):
     return password
 
 class User(Base):
-    """
-    Application's user model.
-    """
+    """ Application's user model.  """
     __tablename__ = 'users'
     user_id = Column(Integer, primary_key=True)
     username = Column(Unicode(20), unique=True)
