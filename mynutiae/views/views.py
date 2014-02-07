@@ -1,15 +1,17 @@
+"""TODO: Docstring"""
 from pyramid.response import Response
 from pyramid.view import view_config
 
 from sqlalchemy.exc import DBAPIError
 
 from mynutiae.models._user import (
-    DBSession,
+ #    DBSession,
     User,
     )
 
-@view_config(route_name='home', renderer='mynutiae:templates/mytemplate.mako')
+@view_config(route_name='home', renderer='mynutiae:templates/login.mako')
 def my_view(request):
+    """TODO: Docstring"""
     try:
         # TODO: This? one = DBSession.query(User).filter(User.name == 'one').first()
         one = { 'something': 'whatever' }

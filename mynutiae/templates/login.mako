@@ -20,7 +20,9 @@
       <div class="top align-center">
         <div>The Login page</div>
         %if logged_in:
-            Currently logged in
+            Currently logged in. <a href="/logout">Log out</a>
+        %else:
+            Currently logged out. <a href="/login">Log in</a>
         %endif
       </div>
     </div>
