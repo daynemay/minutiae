@@ -13,3 +13,4 @@ Getting Started
     $venv/bin/initialize_mynutiae_db development.ini
     $venv/bin/pserve development.ini
 
+    # Will be running on port 8888
