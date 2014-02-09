@@ -3,7 +3,7 @@ mynutiae
 
 A Pyramid, Python, MySQL tracker of personal BS
 
-TODO: open issues from notebook
+TODO: open multi-user issues from notebook
 
 Getting Started
 ---------------
