@@ -1,6 +1,5 @@
 CHANGES.txt
 MANIFEST.in
-README.txt
 development.ini
 production.ini
 setup.cfg
@@ -15,6 +14,7 @@ mynutiae.egg-info/not-zip-safe
 mynutiae.egg-info/requires.txt
 mynutiae.egg-info/top_level.txt
 mynutiae/models/__init__.py
+mynutiae/models/_question.py
 mynutiae/models/_user.py
 mynutiae/scripts/__init__.py
 mynutiae/scripts/initializedb.py
@@ -29,7 +29,6 @@ mynutiae/static/pyramid-small.png
 mynutiae/static/pyramid.png
 mynutiae/static/transparent.gif
 mynutiae/templates/login.mako
-mynutiae/templates/mytemplate.mako
 mynutiae/views/__init__.py
 mynutiae/views/user.py
 mynutiae/views/views.py
