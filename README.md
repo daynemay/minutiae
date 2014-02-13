@@ -14,4 +14,3 @@ Getting Started
     $venv/bin/pserve development.ini
 
     # Will be running on port 8888
-TODO:commit
