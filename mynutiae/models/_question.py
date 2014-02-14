@@ -10,7 +10,9 @@ from sqlalchemy import (
     Unicode,
     )
 
-from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy.ext.declarative import declarative_base
+
+from mynutiae import Base
 
 from sqlalchemy.orm import (
     scoped_session,
@@ -21,7 +23,7 @@ from sqlalchemy.orm import (
 from zope.sqlalchemy import ZopeTransactionExtension
 
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
-Base = declarative_base()
+# Base = declarative_base()
 
 def hash_password(password):
     """ TODO: actually hash password"""
@@ -41,6 +43,7 @@ class Question(Base):
 
     @classmethod
     def all(cls):
+        print dir(DBSession)
         return DBSession.query(Question).order_by(sqlalchemy.desc(Question.question_text))
 
     @classmethod
