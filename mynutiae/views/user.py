@@ -7,6 +7,7 @@ from mynutiae.models._user import (
     DBSession,
     User,
     )
+from mynutiae.models._question import Question
 
 @view_config(route_name='login', renderer='mynutiae:templates/login.mako')
 def login(request):
@@ -17,3 +18,8 @@ def login(request):
 def logout(request):
     """Logout"""
     return {'project': 'mynutiae... but you logged out'}
+
+@view_config(route_name='user_questions', renderer='mynutiae:templates/user_questions.mako')
+def user_questions(request):
+    """List all questions TODO: for a user"""
+    return { 'questions': Question.all()}

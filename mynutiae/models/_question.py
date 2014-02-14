@@ -1,6 +1,7 @@
 """
 Model representing a question defined by a user
 """
+import sqlalchemy
 from sqlalchemy import (
     Column,
     Index,
@@ -37,6 +38,14 @@ class Question(Base):
     def __init__(self, owner_id, question_text):
         self.owner = owner_id
         self.question_text = question_text
+
+    @classmethod
+    def all(cls):
+        return DBSession.query(Question).order_by(sqlalchemy.desc(Question.question_text))
+
+    @classmethod
+    def by_id(cls, id):
+        return DBSession.query(Question).filter(Question.question_id == id).first()
 
 # TODO: Other indexes
 Index('question_text_index', Question.question_text, mysql_length=255)
